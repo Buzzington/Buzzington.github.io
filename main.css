@@ -1,0 +1,150 @@
+.imagecontainer{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(7, auto);
+    max-width: 24rem;
+    height: 100%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+  }
+   
+    .imgback {
+      grid-area: 4 / 3 / 1 / 5;
+    }
+    .imgfront {
+      grid-area: 2 / 2 / 5 / 4;
+    }
+    .imgmiddle {
+      grid-area: 3 / 1 / 5 / 4;
+    }
+    nav{
+ 
+      font-family: 'Allerta Stencil', sans-serif;
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      grid-area: n;
+    }
+    a:hover{
+      color: whitesmoke;
+      background-color: magenta;
+    }
+    a:hover:not(.active) {
+      background-color: magenta;
+    }
+    a{
+      display: inline-block;
+      color: whitesmoke;
+      text-decoration: none;
+      padding: 25px 20px;
+      text-align: center;
+    }   
+    
+    
+    .active {
+      background-color: magenta;
+    }
+
+
+
+.link{
+      text-decoration: underline;
+      color:black;
+      padding: 0%;
+    }
+
+  
+
+  body.home{
+    background: radial-gradient(circle, magenta 0%,rgb(39, 17, 168) 100%);
+  }
+
+  div.pic{
+    
+    filter: opacity(100%);
+    height: 400px;
+    width: 600px;
+    grid-area: p;
+   }
+
+.pic{
+  grid-area: p;
+  padding-left: 60.5%;
+  object-fit: fill;
+}
+ .homename{
+     color: whitesmoke;
+   font-weight: bold;
+   font-size: 64px;
+   font-family: 'Stardos Stencil', cursive;
+   padding-left: 3%;
+   padding-top: 5%;
+   grid-area: h;
+}
+
+.aboutme{
+  font-family: 'Stardos Stencil', cursive;
+  font-weight: bold;
+  font-size: 64px;
+  padding-top: 2%;
+  text-align: left;
+  grid-area: a;
+}
+
+.navhead{ 
+  margin: 0;
+  width: 100%; 
+  word-spacing: 10px;
+  padding-left: 2.5%;
+  grid-area: n;
+}
+.paragraph{
+text-align: inherit;
+font-size: 42px;
+text-align: left;
+grid-area: b;
+}
+.navbar{
+  word-spacing: 10px;
+  padding-left: 2.5%;
+  grid-area: n;
+}
+#background{
+  grid-area: a;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background: cover;
+  padding-left: 50%;
+}
+@media screen and (max-width: 800px) {
+      .homegrid{
+          display: grid;
+          grid-gap: 2px;
+          /* grid is only one column, keep this way */
+          grid-template-columns: 1fr;
+          /* you can enter values, or auto will adjust the box sizes based on content */
+          grid-template-rows: 10% 15% 15% ;
+          grid-template-areas: 
+          "n"
+          "h" 
+          "p";
+
+      }
+    } 
+    @media screen and (min-width: 800px){
+      .container{
+          position: relative;
+          margin: 0 auto;
+          display: grid;
+          text-align: center;
+          grid-template-columns: 1fr;
+          grid-auto-rows: (18%, auto, auto, 7%);
+          grid-template-areas: 
+          "n"
+          "r"
+          "a"
+          "b";
+     }
+    }

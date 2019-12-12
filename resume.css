@@ -1,0 +1,226 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    padding: 10%;
+    text-align: center;
+    color:whitesmoke;
+    background-color: maroon;
+    font-size: 24px;
+}
+ .School{
+     padding-top: 2%;
+
+ }
+ .Pound{
+padding-top: 1%;
+ }
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Merriweather', serif;
+    
+}
+#head{
+    width: 100%;
+}
+/* step one - build your grid */
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 75px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: 80px 100px 50px 200px;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "c c s s w w w w w w w w"
+        "e e e e a a a a a a a a"
+        "m m m m m m m m m m m m";
+}
+
+footer{
+    font-size: 21px;
+}
+
+.navhead{
+    background-color: maroon;
+    background-size: cover; 
+    font-family: 'Allerta Stencil', sans-serif;
+  }
+  nav{
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 24px; 
+  }
+
+  a:hover{
+    color: whitesmoke;
+  }
+
+  a{
+    display: inline;
+    color: black;
+    font-family: 'Allerta Stencil', sans-serif;
+
+  }
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 2px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: 10% 15% 15% 15% 15% 15% 15%;
+        grid-template-areas:
+        
+        "h"
+        "c"
+        "s"
+        "e"
+        "w"
+        "a"
+        "m";
+    }
+    footer {
+        color:rgb(78, 8, 51);
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .skills{
+        grid-area: s;
+        padding-left: 25px;
+        padding-top: 0%;
+    
+            
+    }
+    header{
+        padding: 0%;
+        background-color:maroon;
+        text-align: left;
+        color:whitesmoke;
+        font-size: 24px;
+    }
+    
+    .School{
+        text-align: justify;
+        text-align: left;
+        padding-top: 45px;
+    }
+    
+    .Pound{
+        padding-top: 30px;
+    }
+    .contact{
+        padding-top: 5%;
+}
+}
+
+header {
+    grid-area: h;
+    padding-top: 4px;
+}
+.contact{
+    grid-area: c;
+    padding-left: 20px;
+    padding-top: 25%;
+}
+
+.work{
+    grid-area: w;
+    padding-top: 20%;
+    padding-left: 20px;
+    font-size: 20px;
+    
+}
+
+.work{
+    padding-top: 10%;
+}
+
+
+.skills{
+    grid-area: s;
+    padding-left: 25px;
+    padding-top: 20%;
+    font-size: 20px;
+    
+
+        
+}
+
+ul.skills{
+    list-style-type: circle;
+    list-style-position: inside;
+
+  
+}
+
+p.skills{
+    padding-bottom: 5px;
+
+}
+.education {
+    grid-area: e;
+    padding-top: 30%;
+    padding-left: 20px;
+}
+
+.activities {
+    grid-area: a;
+    padding-top: 34%;
+    padding-left: 29px;
+
+}
+
+footer{
+    grid-area: m;
+    padding-top: 25%;
+    font-weight: bolder;
+}
+
+
+h3{
+    font-weight: bolder;
+    color:maroon; 
+ background-color:whitesmoke;
+}
+#gym{
+    padding-top: 2px;
+}
+
+.job{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+#img1:hover{
+        -webkit-filter: blur(15px); /* Safari */
+        filter: blur(15px); 
+      }
+
+#img1{
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+
+img{
+    image-orientation: inline;
+}
+
+#pics{
+    list-style: none;
+    list-style-position: inside;
+}

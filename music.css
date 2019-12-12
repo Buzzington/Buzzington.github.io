@@ -1,0 +1,87 @@
+.container{
+  display: grid;
+  margin-top: 125px;
+  padding-left: 5%;
+  align-self: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas:"." "Area";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+@media screen and (max-width: 800px) {
+
+  .container{
+      display: grid;
+      grid-gap: 2px;
+      /* grid is only one column, keep this way */
+      grid-template-columns: 1fr;
+      /* you can enter values, or auto will adjust the box sizes based on content */
+      grid-template-rows: 33% 33% 33%;
+      grid-template-areas: 
+      "n"
+      "t"
+      "l";
+    
+   }
+  }
+
+.thumbnail{
+  width: 82%;
+  box-shadow: 4px 4px 4px 4px black;
+}
+.title{
+  padding-left: 5%;
+  font-family: 'Sirin Stencil', cursive;
+  font-size: 36px;
+  color: magenta;
+  letter-spacing: 2%;
+  grid-area: t;
+}
+
+.logo{
+  padding-left: 2%;
+  padding-top: 2%;
+  grid-area: l;
+}
+
+
+body { 
+  background-image: url('images/Stencil.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right; 
+}
+.cap{
+  padding-top: 5%;
+  font-family: 'Allerta Stencil', sans-serif;
+  color: magenta;
+  font-weight: bold;
+  
+}
+
+nav{
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 28px;
+  }
+  a:hover{
+    color: whitesmoke;
+    background-color: magenta;
+  }
+
+  a{
+    display: inline-block;
+    color: black;
+    text-decoration: wavy;
+  }   
+  .navhead{
+    padding-left: 3%;
+  }
+
+.pics{
+  align-content: center;
+
+}

@@ -1,0 +1,92 @@
+.container{
+  display: grid;
+  margin-top: 75px;
+  padding-left: 5%;
+  align-self: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas:"." "Area";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+@media screen and (max-width: 800px) {
+
+  .container{
+      display: grid;
+      grid-gap: 15px;
+      /* grid is only one column, keep this way */
+      grid-template-columns: 1fr;
+      /* you can enter values, or auto will adjust the box sizes based on content */
+      grid-template-rows: 35% 35% 35% 35%; 
+      grid-template-areas: 
+      "n"
+      "t";  
+   }
+  }
+nav{
+  grid-area: n;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+a:hover{
+  color: whitesmoke;
+  background-color: magenta;
+}
+a:hover:not(.active) {
+  background-color: magenta;
+}
+a{
+  display: inline-block;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 20px 20px;
+  text-align: center;
+}   
+
+
+.active {
+  background-color: magenta;
+}
+
+.pic{
+  width: 85%;
+}
+
+.title{
+  text-align: center;
+  font-size: 36px;
+  font-family:'Stardos Stencil', cursive;
+  grid-area: t;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pic {
+  padding: 40px;
+  
+  transition: transform .2s;
+
+  margin: 0 auto;
+}
+
+.pic:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+.cap{
+  padding-top: 5%;
+  font-family: 'Stardos Stencil', cursive;
+  color: magenta;
+  text-align: center;
+  font-size: 30px;
+  padding-right: 5%;
+}
